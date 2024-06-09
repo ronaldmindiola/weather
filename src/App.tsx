@@ -12,6 +12,7 @@ function App() {
       <Display />
       <Forecast />
       <AlertDialog />
+      sdfsf
     </>
   );
 }
