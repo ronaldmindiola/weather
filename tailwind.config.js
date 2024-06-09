@@ -96,6 +96,10 @@ module.exports = {
             opacity: '0',
           },
         },
+        fadeIn: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -103,9 +107,10 @@ module.exports = {
         ping: "ping 0.3s cubic-bezier(0, 0, 0.2, 1) 1",
         "ping-in": "ping-in 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 1",
         "ping-out": "ping-out 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 1",
-        "pulse": "pulse 1s ease-in-out"
+        "pulse": "pulse 1s ease-in-out",
+        fadeIn: 'fadeIn 0.5s forwards',
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-animated")],
 }
