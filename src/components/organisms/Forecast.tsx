@@ -2,6 +2,19 @@ import { WeatherContext } from "@/contexts/WeatherContext";
 import { BlendingModeIcon } from "@radix-ui/react-icons";
 import { useContext } from "react";
 
+type ForecastDay = {
+  date: string;
+  day: {
+    condition: {
+      text: string;
+      icon: string;
+    };
+    maxtemp_c: number;
+    mintemp_c: number;
+    avghumidity: number;
+  };
+};
+
 const Forecast = () => {
   const { weatherData } = useContext(WeatherContext);
   return (
